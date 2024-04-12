@@ -36,3 +36,7 @@ sh run-app.sh
 GET /api/test: Все вопросы с вариантами ответов. <br />
 GET /api/documentation: Документация. <br />
 POST /api/test/submit: Отправить и сохранить ответы на вопросы.
+## Тестирование
+```
+php artisan test
+```
