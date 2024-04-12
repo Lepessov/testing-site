@@ -21,16 +21,9 @@ class TestSubmissionRequest extends FormRequest
      */
     public function rules(): array
     {
-        if (!Cache::has('total_questions')) {
-            $totalQuestions = Question::count();
-            Cache::put('total_questions', $totalQuestions, 1440);
-        }
-
-        $totalQuestions = Cache::get('total_questions');
-
         return [
             'email' => 'required|email',
-            'responses' => 'required|array|size:' . $totalQuestions,
+            'responses' => 'required|array',
             'responses.*.question_id' => 'required|integer',
             'responses.*.option_id' => 'nullable|integer',
             'responses.*.user_input' => 'nullable|string',
@@ -40,19 +33,14 @@ class TestSubmissionRequest extends FormRequest
     public function messages(): array
     {
         return [
-            'email.required' => 'The email field is required.',
-            'email.email' => 'Please enter a valid email address.',
-
-            'responses.required' => 'The responses field is required.',
-            'responses.array' => 'The responses must be an array.',
-            'responses.size' => 'Please provide answers to all questions.',
-
-            'responses.*.question_id.required' => 'Each response must have a question ID.',
-            'responses.*.question_id.integer' => 'The question ID in each response must be an integer.',
-
-            'responses.*.option_id.integer' => 'The option ID in each response must be an integer.',
-
-            'responses.*.user_input.string' => 'The user input in each response must be a string.',
+            'email.required' => 'Поле электронной почты обязательно для заполнения.',
+            'email.email' => 'Пожалуйста, введите действительный адрес электронной почты.',
+            'responses.required' => 'Поле ответов обязательно для заполнения.',
+            'responses.array' => 'Ответы должны быть представлены в виде массива.',
+            'responses.*.question_id.required' => 'Каждый ответ должен содержать идентификатор вопроса.',
+            'responses.*.question_id.integer' => 'Идентификатор вопроса в каждом ответе должен быть целым числом.',
+            'responses.*.option_id.integer' => 'Идентификатор варианта ответа в каждом ответе должен быть целым числом.',
+            'responses.*.user_input.string' => 'Введенный пользовательский текст в каждом ответе должен быть строкой.',
         ];
     }
 }
