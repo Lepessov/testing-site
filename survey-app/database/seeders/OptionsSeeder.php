@@ -59,13 +59,11 @@ class OptionsSeeder extends Seeder
             ]);
         }
 
-        // Question 4
         $optionsQuestion4 = [
             ['option_text' => 'Нет'],
             ['option_text' => 'Да'],
         ];
 
-        // Insert options into the database for question 4
         foreach ($optionsQuestion4 as $option) {
             Option::create([
                 'question_id' => 4,
@@ -73,7 +71,6 @@ class OptionsSeeder extends Seeder
             ]);
         }
 
-        // Question 5
         $optionsQuestion5 = [
             ['option_text' => 'Большое количество требуемых документов, необходимых для получения поддержки'],
             ['option_text' => 'Неясность порядка, который необходимо соблюсти при получении поддержки'],
@@ -83,7 +80,6 @@ class OptionsSeeder extends Seeder
             ['option_text' => 'Иное'],
         ];
 
-        // Insert options into the database for question 5
         foreach ($optionsQuestion5 as $option) {
             Option::create([
                 'question_id' => 5,
@@ -91,14 +87,12 @@ class OptionsSeeder extends Seeder
             ]);
         }
 
-        // Question 6
         $optionsQuestion6 = [
             ['option_text' => 'Нет'],
             ['option_text' => 'Да'],
             ['option_text' => 'Иное'],
         ];
 
-        // Insert options into the database for question 6
         foreach ($optionsQuestion6 as $option) {
             Option::create([
                 'question_id' => 6,
@@ -106,7 +100,6 @@ class OptionsSeeder extends Seeder
             ]);
         }
 
-        // Question 7
         $optionsQuestion7 = [
             ['option_text' => 'Размещение информации на сайтах государственных органов власти и местного самоуправления'],
             ['option_text' => 'Через организации, образующие инфраструктуру поддержки субъектов МСП'],
@@ -115,7 +108,6 @@ class OptionsSeeder extends Seeder
             ['option_text' => 'Размещение информации на информационных стендах органов власти, в МФЦ, СМИ'],
         ];
 
-        // Insert options into the database for question 7
         foreach ($optionsQuestion7 as $option) {
             Option::create([
                 'question_id' => 7,
@@ -123,14 +115,12 @@ class OptionsSeeder extends Seeder
             ]);
         }
 
-        // Question 8
         $optionsQuestion8 = [
             ['option_text' => 'Нет'],
             ['option_text' => 'Иное'],
             ['option_text' => 'Да'],
         ];
 
-        // Insert options into the database for question 8
         foreach ($optionsQuestion8 as $option) {
             Option::create([
                 'question_id' => 8,
@@ -138,7 +128,6 @@ class OptionsSeeder extends Seeder
             ]);
         }
 
-        // Question 9
         $optionsQuestion9 = [
             ['option_text' => 'На праве собственности'],
             ['option_text' => 'На праве аренды'],
@@ -146,7 +135,6 @@ class OptionsSeeder extends Seeder
             ['option_text' => 'Не использую имущество'],
         ];
 
-        // Insert options into the database for question 9
         foreach ($optionsQuestion9 as $option) {
             Option::create([
                 'question_id' => 9,
@@ -154,14 +142,12 @@ class OptionsSeeder extends Seeder
             ]);
         }
 
-        // Question 10
         $optionsQuestion10 = [
             ['option_text' => 'Высокий уровень затрат на текущее содержание имущества (коммунальные расходы, ремонт и иные платежи)'],
             ['option_text' => 'Высокий размер налога на имущество'],
             ['option_text' => 'Высокий размер арендной платы'],
         ];
 
-        // Insert options into the database for question 10
         foreach ($optionsQuestion10 as $option) {
             Option::create([
                 'question_id' => 10,
@@ -169,7 +155,6 @@ class OptionsSeeder extends Seeder
             ]);
         }
 
-        // Question 11
         $optionsQuestion11 = [
             ['option_text' => 'Движимое имущество (машины, оборудование и прочее)'],
             ['option_text' => 'Производственные здания, помещения'],
@@ -178,7 +163,6 @@ class OptionsSeeder extends Seeder
             ['option_text' => 'Иное'],
         ];
 
-        // Insert options into the database for question 11
         foreach ($optionsQuestion11 as $option) {
             Option::create([
                 'question_id' => 11,
@@ -186,14 +170,12 @@ class OptionsSeeder extends Seeder
             ]);
         }
 
-        // Question 12
         $optionsQuestion12 = [
             ['option_text' => 'Да'],
             ['option_text' => 'Нет'],
             ['option_text' => 'Иное'],
         ];
 
-        // Insert options into the database for question 12
         foreach ($optionsQuestion12 as $option) {
             Option::create([
                 'question_id' => 12,
